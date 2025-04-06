@@ -1,0 +1,3 @@
+[submodule "themes/OrgNest"]
+	path = themes/OrgNest
+	url = https://github.com/himadoya/OrgNest.git
