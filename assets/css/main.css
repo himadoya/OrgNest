@@ -176,3 +176,29 @@ a {
 .term-item a:hover {
   text-decoration: underline;
 }
+
+.card-img-top {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  aspect-ratio: 16 / 9;
+}
+
+.card-body {
+  padding: 1.25rem;
+}
+
+.post-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.btn-outline-primary {
+  margin-top: auto;
+}
