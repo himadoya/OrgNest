@@ -1,120 +1,51 @@
-# OrgNest
+# OrgNest Example Site
 
-**OrgNest** is a modern, responsive Hugo theme designed for organizations, teams, and communities. It features a clean layout, content-focused design, and customizable components for blogs, team profiles, portfolios, and more.
+This is an example site for the [OrgNest](https://github.com/himadoya/OrgNest) Hugo theme. It demonstrates how to use and configure the theme to create an organization, team, or community website.
 
-![OrgNest Hero](./images/hero-screenshot.png)
+## Demo
 
-## ✨ Features
+You can view the live demo of the example site here: [Demo Site](https://your-username.github.io/example-site)
 
-- 🔹 Modular and minimal layout system
-- 📚 Blog and article support with tags & categories
-- 👥 Team profiles with social links
-- 📦 Portfolio / Our Works showcase
-- 📅 Historical timeline section
-- 🧠 Search integration (Fuse.js)
-- 🌐 i18n-ready and SEO-optimized
-- ⚙️ Configurable via `hugo.toml`
+## Features
 
----
+- Clean and modern design
+- Responsive layout
+- Support for blog, team profiles, portfolio, and more
+- SEO optimized
+- Easy-to-use configuration
+- Multilingual support (via i18n)
+- Dark mode (coming soon)
 
-## 🚀 Installation
+## Installation
 
-### 1. Install the Theme
+To get started, follow the steps below to install and run the example site locally.
 
-**Using Git submodule** (recommended):
-
-```bash
-git submodule add https://github.com/himadoya/OrgNest themes/OrgNest
-```
-
-**Or clone manually:**
+### Clone the repository
 
 ```bash
-git clone https://github.com/himadoya/OrgNest themes/OrgNest
+git clone https://github.com/your-username/example-site.git
+cd example-site
 ```
 
-### 2. Enable the Theme
+## Configuration
 
-In your site config (`hugo.toml`):
+For full configuration options, check the theme's [hugo.toml](hugo.toml) in this branch and documentation (coming soon).
 
-```toml
-theme = "OrgNest"
-```
+## Customization
+You can customize the content of the example site by editing the files in the content/ folder:
+
+- content/about.md: About Us page
+- content/posts/: Add blog posts here
+- content/team/: Add team member here
+- content/our-works/: Add past works or portfolio here
+
+## License
+
+OrgNest Theme is licensed under the [MIT License](LICENSE).
 
 ---
 
-## ⚙️ Configuration
-
-Here's a minimal `hugo.toml` to get started:
-
-```toml
-baseURL = "https://example.org"
-languageCode = "en-us"
-title = "Your Organization Name"
-theme = "OrgNest"
-
-[params]
-  description = "Empowering change through collective impact."
-
-  [params.about]
-    introTitle = "Welcome to Our Organization"
-    introSubtitle = "We empower sustainable impact through innovation and community."
-
-  [params.homeSections]
-    showHero = true
-    showStats = true
-    showTestimonial = true
-    showTeam = true
-    showTimeline = true
-
-[params.testimonial]
-  title = "What Our Seniors Say"
-  image = "/images/testimonial.jpg"
-  quote = "Joining this organization changed my perspective on teamwork and impact."
-  name = "Alexandra"
-  role = "Former President"
-```
-
-For full configuration options, check the theme's [example-hugo.toml](example-hugo.toml) or the [example-site branch](https://github.com/himadoya/OrgNest/tree/example-site), as well as the documentation (coming soon).
-
----
-
-## 📂 Repository Structure
-
-Only essential folders are included to keep the theme lightweight:
-
-```
-OrgNest/
-├── assets/
-├── i18n/
-├── images/
-├── layouts/
-├── LICENSE
-├── README.md
-├── go.mod
-├── hugo.toml
-└── theme.toml
-```
-
-## Roadmap / On Progress
-These features are planned or currently in development:
-- [] Dark mode toggle
-- [] Multilingual support via i18n
-- [] Netlify-ready deployment template
-- [] Custom shortcode library for easier content creation
-- [] Theme settings UI via config/_default/params.toml
-- [] Improved accessibility (ARIA labels, semantic HTML)
-- [] Enhanced search (support tags, content preview)
-
----
-
-## 📜 License
-
-OrgNest is licensed under the [MIT License](LICENSE).
-
----
-
-## 🛠 Author & Credits
+## Author & Credits
 
 Made with ❤️ by [HIMADOYA+](https://himadoya.org)
 

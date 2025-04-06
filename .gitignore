@@ -22,3 +22,6 @@ Thumbs.db
 # Environment config files
 .env
 .env.local
+
+# Hugo Build Lock
+.hugo_build.lock

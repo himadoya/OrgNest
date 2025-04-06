@@ -1,0 +1,191 @@
+baseURL = "https://example.org/"
+languageCode = "en-US"
+title = "OceanGuard"
+theme = "OrgNest"
+enableRobotsTXT = true
+
+[[menu.main]]
+  name = "Home"
+  url = "/"
+  weight = 1
+
+[[menu.main]]
+  name = "Posts"
+  url = "/posts/"
+  weight = 2
+
+[[menu.main]]
+  name = "About"
+  url = "/about/"
+  weight = 3
+
+[[menu.main]]
+  name = "Team"
+  url = "/team/"
+  weight = 4
+
+[[menu.main]]
+  name = "Our Works"
+  url = "/our-works/"
+  weight = 5
+  
+[[menu.main]]
+  name = "Archive"
+  url = "/archive/"
+  weight = 6
+
+[params]
+  archiveSections = ["posts", "our-works"]
+
+  [params.orginfo]
+    org_name = "OceanGuard"
+    org_tagline = "Safeguarding the ocean for future generations."
+    contact_phone = "+62 123 456 789"
+    contact_email = "info@oceanguard.org"
+    org_address = "Jl. Laut Bersih No. 7, Jakarta, Indonesia"
+
+    [[params.orginfo.socials]]
+      name = "facebook"
+      url = "https://facebook.com/yourorg"
+
+    [[params.orginfo.socials]]
+      name = "twitter"
+      url = "https://twitter.com/yourorg"
+
+    [[params.orginfo.socials]]
+      name = "instagram"
+      url = "https://instagram.com/yourorg"
+
+  [params.homeSections]
+    showHero = true
+    showWhy = true
+    showCTA = true
+    showStats = true
+    showProcess = true
+    showTestimonial = true
+    showBottomCTA = true
+
+  [params.hero]
+    title = "Together, we protect our oceans."
+    subtitle = "Join OceanGuard to restore marine biodiversity and promote sustainable blue economy."
+    image = "https://images.unsplash.com/photo-1557804506-669a67965ba0"
+
+  [params.why]
+    title = "Why thousands support OceanGuard’s mission"
+
+    [[params.why.items]]
+      icon = "bi-globe"
+      title = "Global Impact"
+      text = "We coordinate initiatives that improve marine health worldwide."
+
+    [[params.why.items]]
+      icon = "bi-droplet"
+      title = "Clean Water Movement"
+      text = "Reducing plastic pollution and protecting water quality."
+
+    [[params.why.items]]
+      icon = "bi-compass"
+      title = "Sustainable Navigation"
+      text = "Supporting green maritime solutions and coastal communities."
+
+  [params.cta]
+    image = "https://images.unsplash.com/photo-1554265311-8799d909c767"
+    title = "Dive into action for our oceans"
+    description = "Our programs empower people and policy for healthier oceans, from reefs to the deep sea."
+    buttonText = "Join the movement"
+    buttonLink = "#"
+    list = [
+      "Organize coastal clean-ups.",
+      "Support marine conservation policies.",
+      "Educate communities about sustainable fishing."
+    ]
+
+  [params.stats]
+    title = "OceanGuard in numbers"
+    description = "We’re building a network of changemakers protecting ocean ecosystems around the globe."
+
+    [[params.stats.items]]
+      number = "50+"
+      label = "Marine protected areas supported"
+
+    [[params.stats.items]]
+      number = "500K+"
+      label = "Kilograms of waste removed"
+
+    [[params.stats.items]]
+      number = "200+"
+      label = "Ocean education campaigns"
+
+    [[params.stats.items]]
+      number = "20+"
+      label = "Coastal nations partnered"
+
+  [params.process]
+    title = "Our step-by-step to save the seas"
+
+    [[params.process.steps]]
+      title = "1. Research & Data"
+      description = "Collecting oceanographic and ecological data."
+
+    [[params.process.steps]]
+      title = "2. Action Planning"
+      description = "Developing strategies for conservation and restoration."
+
+    [[params.process.steps]]
+      title = "3. Field Deployment"
+      description = "Executing campaigns and clean-ups on site."
+
+    [[params.process.steps]]
+      title = "4. Education & Advocacy"
+      description = "Raising awareness and lobbying for ocean-friendly policies."
+
+  [params.testimonial]
+    title = "Volunteers speak about OceanGuard"
+    image = "https://images.unsplash.com/photo-1507679799987-c73779587ccf"
+    quote = "Joining OceanGuard changed how I see the ocean. It’s not just water—it’s life."
+    name = "Marina Widjaya"
+    role = "OceanGuard Volunteer"
+
+  [params.bottomcta]
+    title = "Protect the oceans, protect our future"
+    description = "Take action today to ensure a sustainable blue planet for generations to come."
+    button_text = "Become a Guardian"
+    button_url = "#"
+
+  [params.about]
+    introTitle = "About Us"
+    introSubtitle = "Our story, vision, and impact."
+
+  [params.timeline]
+    title = "Our Journey"
+
+    [[params.timeline.events]]
+      year = "2020"
+      title = "Founded"
+      description = "Our organization was officially established with a mission to support ocean-based SDGs."
+      image = "https://images.unsplash.com/photo-1741807083060-39c641cd97fa?q=80&w=2036&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+
+    [[params.timeline.events]]
+      year = "2021"
+      title = "First Coastal Cleanup"
+      description = "Launched our first environmental action program with 500+ volunteers."
+      image = "https://images.unsplash.com/photo-1741807117240-0aee0cd41d25?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+
+    [[params.timeline.events]]
+      year = "2022"
+      title = "Tech for Ocean Initiative"
+      description = "Introduced our first open-source marine monitoring system."
+      image = ""
+
+    [[params.timeline.events]]
+      year = "2024"
+      title = "Global Partnership"
+      description = "Collaborated with international organizations for blue carbon awareness."
+      image = ""
+
+[taxonomies]
+  tag = "tags"
+  category = "category"
+
+[outputs]
+  home = ["HTML", "JSON"]

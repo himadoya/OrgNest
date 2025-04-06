@@ -1,2 +1,0 @@
-{{ $bootstrapjs := resources.Get "js/bootstrap.min.js" | fingerprint }}
-<script src="{{ $bootstrapjs.RelPermalink }}" integrity="{{ $bootstrapjs.Data.Integrity }}"></script>
