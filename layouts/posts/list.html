@@ -1,0 +1,44 @@
+{{ define "main" }}
+<section class="section bg-white">
+  <div class="container">
+    <h1 class="text-center mb-5">Latest Updates</h1>
+
+    <div class="mb-4 text-center">
+      <input id="searchInput" type="text" class="form-control w-50 mx-auto" placeholder="Search articles...">
+    </div>
+
+    <div class="row" id="postsList">
+      {{ range .Pages }}
+      <div class="col-md-4 mb-4 post-item">
+        <div class="card h-100 shadow-sm border-0">
+          {{ with .Params.thumbnail }}
+            <img src="{{ . | relURL }}" class="card-img-top" alt="{{ $.Title }}">
+          {{ end }}
+          <div class="card-body">
+            <h5 class="card-title">{{ .Title }}</h5>
+            <p class="card-text">
+              <small class="text-muted">
+                {{ .Date.Format "2 Jan 2006" }} · 
+                {{ with .Params.author }}
+                  {{ . }}
+                {{ else }}
+                  {{ site.Params.orginfo.org_name }}
+                {{ end }}
+              </small>
+            </p>
+            <a href="{{ .RelPermalink }}" class="btn btn-outline-primary btn-sm">Read more</a>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+{{ $fusejs := resources.Get "js/fuse.basic.min.js" | fingerprint }}
+<script src="{{ $fusejs.RelPermalink }}" integrity="{{ $fusejs.Data.Integrity }}"></script>
+{{ $searchjs := resources.Get "js/search-worker.js" | minify | fingerprint }}
+<script src="{{ $searchjs.RelPermalink }}" integrity="{{ $searchjs.Data.Integrity }}"></script>
+
+{{ end }}
+  

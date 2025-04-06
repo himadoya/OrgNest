@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="{{ site.Language.LanguageCode }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
+<head>
+  {{ partial "head.html" . }}
+</head>
+<body class="d-flex flex-column min-vh-100">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    {{ partial "header.html" . }}
+  </nav>
+  <main class="flex-fill bg-white">
+    {{ block "main" . }}{{ end }}
+  </main>
+  <footer class="bg-dark text-white py-4 mt-0">
+    {{ partial "footer.html" . }}
+  </footer>
+</body>
+  {{ partial "scripts.html" . }}
+  <script>
+    feather.replace()
+  </script>
+</html>

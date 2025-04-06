@@ -1,0 +1,50 @@
+{{ define "main" }}
+<section class="section">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <img src="{{ .Params.thumbnail }}" alt="{{ .Title }}" class="img-fluid mb-4">
+        <h1>{{ .Title }}</h1>
+        <p class="text-muted mb-4">
+          {{ .Date.Format "2 January 2006" }} · 
+            {{ with .Params.author }}
+              {{ . }}
+            {{ else }}
+              {{ site.Params.orginfo.org_name }}
+            {{ end }}
+        </p>
+
+        {{ if .TableOfContents }}
+        <div class="mb-4">
+          <h5>Table of Contents</h5>
+          <div class="toc border-start ps-3">
+            {{ .TableOfContents }}
+          </div>
+        </div>
+        {{ end }}
+
+        <div class="content">
+          {{ .Content }}
+        </div>
+
+        {{ with .Params.category }}
+        <div class="mt-4">
+          <strong>Category:</strong>
+          <a href="{{ "/category/" | relURL }}{{ . | urlize }}" class="text-decoration-none">{{ . }}</a>
+        </div>
+        {{ end }}
+
+        {{ with .Params.tags }}
+        <div class="mt-2">
+          <strong>Tags:</strong>
+          {{ range . }}
+          <a href="{{ "/tags/" | relURL }}{{ . | urlize }}" class="badge bg-secondary text-decoration-none">{{ . }}</a>
+          {{ end }}
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
+

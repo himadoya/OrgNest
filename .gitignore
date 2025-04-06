@@ -1,0 +1,24 @@
+# Build output
+/public/
+resources/
+
+# Dependency directories
+/node_modules/
+
+# IDE/editor files
+.vscode/
+.idea/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Log and temp files
+*.log
+*.swp
+*.bak
+*.tmp
+
+# Environment config files
+.env
+.env.local

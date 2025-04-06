@@ -1,0 +1,8 @@
+{{- $page := .page }}
+{{- $menuID := .menuID }}
+
+{{- with index site.Menus $menuID }}
+  {{- range . }}
+    <li><a href="{{ .URL }}" class="text-white">{{ .Name }}</a></li>
+  {{- end }}
+{{- end }}

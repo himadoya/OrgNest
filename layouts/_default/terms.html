@@ -1,0 +1,28 @@
+{{ define "main" }}
+<main class="main section bg-white">
+  <div class="container">
+    <div class="row justify-content-center mb-4">
+      <div class="col-md-8 text-center">
+        <h1 class="display-5 fw-semibold">{{ .Title }}</h1>
+      </div>
+    </div>
+
+    <div class="row">
+      {{ range .Data.Terms.Alphabetical }}
+      <div class="col-md-4 col-sm-6 mb-3">
+        <div class="card shadow-sm h-100 border-0">
+          <div class="card-body">
+            <a href="{{ .Page.RelPermalink }}" class="text-decoration-none">
+              <h5 class="card-title mb-0">
+                {{ .Term }}
+                <sup><strong><sup>{{ .Count }}</sup></strong></sup>
+              </h5>
+            </a>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</main>
+{{ end }}

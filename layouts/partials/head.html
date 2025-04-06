@@ -1,0 +1,42 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+<title>
+  {{ if .IsHome }}
+    {{ site.Title }}
+  {{ else }}
+    {{ printf "%s | %s" .Title site.Title }}
+  {{ end }}
+</title>
+
+{{/* Default fallback values */}}
+{{ $org := site.Params.orginfo.org_name | default site.Title }}
+{{ $title := .Title | default $org }}
+{{ $desc := .Params.description | default (print "Learn more about " $org ".") }}
+{{ $author := .Params.author | default $org }}
+
+<meta name="description" content="{{ $desc }}">
+<meta name="author" content="{{ $author }}">
+<meta name="robots" content="index, follow">
+
+{{/* Open Graph for social sharing */}}
+<meta property="og:title" content="{{ $title }}">
+<meta property="og:description" content="{{ $desc }}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ .Permalink }}">
+{{ with .Params.thumbnail }}
+  <meta property="og:image" content="{{ . | absURL }}">
+{{ end }}
+
+{{/* Twitter Card */}}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ $title }}">
+<meta name="twitter:description" content="{{ $desc }}">
+{{ with .Params.thumbnail }}
+  <meta name="twitter:image" content="{{ . | absURL }}">
+{{ end }}
+
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<script src="https://unpkg.com/feather-icons"></script>
+{{ partialCached "head/css.html" . }}
+{{ partialCached "head/js.html" . }}

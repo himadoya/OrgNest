@@ -1,0 +1,41 @@
+{{ define "main" }}
+<section class="section bg-white">
+  <div class="container">
+    {{ $type := .Type }}
+    <h1 class="text-center mb-5">
+      {{ if eq $type "tags" }}
+        Tag: {{ .Title }}
+      {{ else if eq $type "category" }}
+        Category: {{ .Title }}
+      {{ else }}
+        {{ .Title }}
+      {{ end }}
+    </h1>
+
+    {{ with .Content }}
+    <div class="mb-4 text-center">
+      {{ . }}
+    </div>
+    {{ end }}
+
+    <div class="row">
+      {{ range .Pages }}
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm border-0">
+          {{ with .Params.thumbnail }}
+          <img src="{{ . | relURL }}" class="card-img-top" alt="{{ $.Title }}">
+          {{ end }}
+          <div class="card-body">
+            <h5 class="card-title mb-2">
+              <a href="{{ .RelPermalink }}" class="text-decoration-none text-dark">{{ .Title }}</a>
+            </h5>
+            
+            <a href="{{ .RelPermalink }}" class="btn btn-sm btn-outline-primary mt-3">Read more</a>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
