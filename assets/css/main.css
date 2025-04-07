@@ -270,3 +270,16 @@ footer {
     top: 100px; /* Adjust if you have a fixed header */
   }
 }
+
+/* ================================
+   Content Thumbnail Styling
+   Use for article or post preview images
+================================ */
+
+.content-thumbnail {
+  width: 100%;
+  height: auto;
+  max-height: 450px;
+  object-fit: cover;
+  aspect-ratio: 16 / 9;
+}
