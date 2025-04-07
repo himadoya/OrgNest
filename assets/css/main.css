@@ -259,3 +259,14 @@ footer {
   display: block;
   margin: 0 auto;
 }
+
+/* ================================
+   Sticky Sidebar (Team Profile)
+   Only enabled on desktop screens
+================================= */
+@media (min-width: 800px) {
+  .sticky-profile {
+    position: sticky;
+    top: 100px; /* Adjust if you have a fixed header */
+  }
+}
