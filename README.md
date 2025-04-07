@@ -23,8 +23,8 @@ To get started, follow the steps below to install and run the example site local
 ### Clone the repository
 
 ```bash
-git clone https://github.com/your-username/example-site.git
-cd example-site
+git clone -b example-site https://github.com/himadoya/OrgNest.git
+cd OrgNest
 ```
 
 ## Configuration
