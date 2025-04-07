@@ -3,6 +3,7 @@ languageCode = "en-US"
 title = "OceanGuard"
 theme = "OrgNest"
 enableRobotsTXT = true
+canonifyURLs = true
 
 [[menu.main]]
   name = "Home"
