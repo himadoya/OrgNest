@@ -3,6 +3,7 @@ languageCode = "en-US"
 title = "My New Hugo Site"
 theme = "OrgNest"
 enableRobotsTXT = true
+canonifyURLs = true
 
 [[menu.main]]
   name = "Home"
