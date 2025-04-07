@@ -3,10 +3,10 @@
     <link rel="stylesheet" href="{{ .RelPermalink }}">
   {{- else }}
     {{- with . | minify | fingerprint }}
-      <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+      <link rel="stylesheet" href="{{ .RelPermalink | absURL }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
     {{- end }}
   {{- end }}
 {{- end }}
 
 {{ $bootstrapcss := resources.Get "css/bootstrap.min.css" | fingerprint }}
-<link rel="stylesheet" href="{{ $bootstrapcss.RelPermalink }}" integrity="{{ $bootstrapcss.Data.Integrity }}" crossorigin="anonymous">
+<link rel="stylesheet" href="{{ $bootstrapcss.RelPermalink | absURL }}" integrity="{{ $bootstrapcss.Data.Integrity }}" crossorigin="anonymous">

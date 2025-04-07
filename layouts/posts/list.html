@@ -38,9 +38,9 @@
 </section>
 
 {{ $fusejs := resources.Get "js/fuse.basic.min.js" | fingerprint }}
-<script src="{{ $fusejs.RelPermalink }}" integrity="{{ $fusejs.Data.Integrity }}"></script>
+<script src="{{ $fusejs.RelPermalink | absURL }}" integrity="{{ $fusejs.Data.Integrity }}"></script>
 {{ $searchjs := resources.Get "js/search-worker.js" | minify | fingerprint }}
-<script src="{{ $searchjs.RelPermalink }}" integrity="{{ $searchjs.Data.Integrity }}"></script>
+<script src="{{ $searchjs.RelPermalink | absURL }}" integrity="{{ $searchjs.Data.Integrity }}"></script>
 
 {{ end }}
   
