@@ -180,6 +180,7 @@ footer {
   height: auto;
   display: block;
   margin: 1rem auto;
+  border-radius: 0.25rem;
 }
 
 /* ================================
