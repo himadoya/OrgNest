@@ -4,7 +4,7 @@ This is an example site for the [OrgNest](https://github.com/himadoya/OrgNest) H
 
 ## Demo
 
-You can view the live demo of the example site here: [Demo Site](https://your-username.github.io/example-site)
+You can view the live demo of the example site here: [Demo Site](https://himadoya.github.io/OrgNest)
 
 ## Features
 
