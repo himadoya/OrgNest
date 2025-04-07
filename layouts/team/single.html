@@ -4,7 +4,7 @@
     <div class="row align-items-center">
       <div class="col-md-4 text-center mb-4">
         {{ with .Params.thumbnail }}
-        <img src="{{ . }}" class="img-fluid rounded-circle shadow" alt="{{ $.Params.name }}">
+        <img src="{{ . }}" class="img-fluid rounded member-photos" alt="{{ $.Params.name }}">
         {{ end }}
         <h3 class="mt-3">{{ .Params.name }}</h3>
         <p class="text-muted">{{ .Params.position }}</p>
