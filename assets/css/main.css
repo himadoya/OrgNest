@@ -237,26 +237,25 @@ footer {
 
 /* ================================
    Team Member Photo Container
-   Use when wrapping <img> inside a div
+   Make container responsive and fluid
 ================================ */
-
 .member-photos-container {
-  aspect-ratio: 9 / 16;
   width: 100%;
   overflow: hidden;
   position: relative;
 }
 
-.member-photos-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
+/* ================================
+   Team Member Photo Image
+   Maintain 3:4 aspect ratio and responsive
+================================ */
+.member-photos-container img,
 .member-photos {
-  aspect-ratio: 9 / 16;
+  aspect-ratio: 3 / 4;
   width: 100%;
+  height: auto;
+  max-height: 360px;
   object-fit: cover;
   display: block;
+  margin: 0 auto;
 }

@@ -2,12 +2,12 @@
 <section class="section">
   <div class="container text-center">
     <h1 class="mb-5">Meet Our Team</h1>
-    <div class="row justify-content-center">
+    <div class="row justify-content-center gx-4 gy-4">
       {{ range sort .Pages }}
-      <div class="col-md-3 mb-4">
-        <div class="card h-100 shadow-sm border-0 member-photos-container">
+      <div class="col-sm-6 col-md-4 col-lg-3 d-flex align-items-stretch">
+        <div class="card w-100 shadow-sm border-0 member-photos-container d-flex flex-column">
           {{ with .Params.thumbnail }}
-          <img src="{{ . }}" class="card-img-top" alt="{{ $.Params.name }}">
+          <img src="{{ . }}" class="card-img-top member-photos" alt="{{ $.Params.name }}">
           {{ end }}
           <div class="card-body">
             <h5 class="card-title">{{ .Params.name }}</h5>
@@ -24,12 +24,13 @@
               {{ end }}
             </div>
           </div>
-          <div class="card-footer bg-white border-0">
+          <div class="card-footer bg-white border-0 mt-auto">
             <a href="{{ .RelPermalink }}" class="btn btn-outline-primary btn-sm">View Profile</a>
           </div>
         </div>
       </div>
       {{ end }}
+    </div>   
     </div>
   </div>
 </section>
