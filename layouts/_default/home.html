@@ -4,7 +4,7 @@
   {{ if .Site.Params.homeSections.showHero }}
     <!-- Hero -->
     {{ with .Site.Params.hero.image }}
-    <section class="hero-section text-white py-5" style="background: url('{{ . }}') no-repeat center center; background-size: cover;">
+    <section class="hero-section text-white py-5" style="background: url('{{ . | absURL }}') no-repeat center center; background-size: cover;">
     {{ end }}
       <div class="container text-center">
         <h1>{{ .Site.Params.hero.title }}</h1>
@@ -40,7 +40,7 @@
         <div class="row align-items-center">
           <div class="col-md-6 mb-4 mb-md-0">
             {{ with .Site.Params.cta.image }}
-            <img src="{{ . }}" alt="Elderly Joy" class="img-fluid rounded shadow-sm">
+            <img src="{{ . | absURL }}" alt="Elderly Joy" class="img-fluid rounded shadow-sm">
             {{ end }}
           </div>
           <div class="col-md-6">
@@ -103,7 +103,7 @@
           <img src="{{ . }}"  alt="Senior Testimonial"  class="testimonial-img rounded-circle shadow" width="240" height="240" style="object-fit: cover; aspect-ratio: 1 / 1;">
           <blockquote class="blockquote mt-3">
           {{ end }}
-            <p class="fst-italic">“{{ .Site.Params.testimonial.quote }}”</p>
+            <p class="fst-italic">“{{ .Site.Params.testimonial.quote | absURL }}”</p>
             <footer class="blockquote-footer">
               {{ .Site.Params.testimonial.name }}, {{ .Site.Params.testimonial.role }}
             </footer>
