@@ -5,7 +5,7 @@ description = "OrgNest is a modern, responsive Hugo theme designed for organizat
 min_version = "0.116.0"
 
 homepage = "https://github.com/himadoya/OrgNest"
-# demosite = "https://owner.github.io/repo"
+demosite = "https://orgnest.netlify.app"
 
 tags = ["organization", "blog", "portfolio", "team", "company", "responsive", "clean", "accessible"]
 features = ["modular layout", "search integration", "tags & categories", "team profiles", "project portfolio", "historical timeline", "SEO optimized"]
